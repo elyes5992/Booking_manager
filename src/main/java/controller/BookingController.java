@@ -1,6 +1,7 @@
 package controller;
 
 import entity.Booking;
+import lombok.RequiredArgsConstructor;
 import service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -9,11 +10,10 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/api/bookings")
 public class BookingController {
-
-    @Autowired
-    private BookingService bookingService;
+    private final BookingService bookingService;
 
     @GetMapping
     public List<Booking> getAllBookings() {
