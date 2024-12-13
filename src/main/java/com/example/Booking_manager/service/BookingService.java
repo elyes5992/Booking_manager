@@ -1,10 +1,8 @@
-package service;
+package com.example.Booking_manager.service;
 
-
-
-import entity.Booking;
-import repo.BookingRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.Booking_manager.entity.Booking;
+import lombok.RequiredArgsConstructor;
+import com.example.Booking_manager.repo.BookingRepository;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -12,10 +10,10 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+@RequiredArgsConstructor
 public class BookingService {
 
-    @Autowired
-    private BookingRepository bookingRepository;
+    private final BookingRepository bookingRepository;
 
     public List<Booking> getAllBookings() {
         return bookingRepository.findAll();

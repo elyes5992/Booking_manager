@@ -1,17 +1,16 @@
-package controller;
+package com.example.Booking_manager.controller;
 
-import entity.Booking;
+import com.example.Booking_manager.entity.Booking;
 import lombok.RequiredArgsConstructor;
-import service.BookingService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import com.example.Booking_manager.service.BookingService;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/bookings")
+@RequestMapping("/bookings")
 public class BookingController {
     private final BookingService bookingService;
 

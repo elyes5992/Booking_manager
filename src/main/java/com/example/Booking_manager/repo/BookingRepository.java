@@ -1,8 +1,8 @@
-package repo;
+package com.example.Booking_manager.repo;
 
 
 
-import entity.Booking;
+import com.example.Booking_manager.entity.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
